@@ -21,15 +21,23 @@ In conducting this research, we hope to gain new insights and understand the Wom
 # Analysis report
 
 The Women's March tweets data has 3100 entries with 5 columns. There are no missing values in 4 columns whereas the column named "place" has 308 known values(or 2792 missing values).
+
 All the entries have the same id. Also, the id looks unusual. 51 different sources were used to post the tweets. Most people used "Twitter for iphone" as their source, followed by "Twitter for Android" and "Twitter webclient".
+
 The tweets were created in different countries having different timezones and in different languages. Surprisingly, all the tweets were created between the time 23:56 and 23:59 on January 21, 2017.
+
 The Women's March happened in various countries. The tweets include both abbreviated and full name of the US states.
+
 The column named "place" holds the location from where the tweets are published. It has 308 known values(or 2792 missing values). The analysis was carried out with the known values.It was split into "city" and "State" to facilitate the analysis.
 The dataframe was processed in detail to represent all the US states in an abbreviated form in the column named "State" and USA as their country in the column named "country". The Non-USA locations are unchanged.
+
 The tweets came from 30 different countries. From the known location tweets, it is found that the major tweets came from USA.
-There were tweets from 41 US states. The state CA(California) has the major tweets, followed by DC(The District of Columbia) and NY(Newyork). There were 3100 tweets in the data. The tweets include hashtags, text messages, links, tags and emojis or some symbols. The tweets were in different languages.
+There were tweets from 41 US states. The state CA(California) has the major tweets, followed by DC(The District of Columbia) and NY(Newyork). 
+
+There were 3100 tweets in the data. The tweets include hashtags, text messages, links, tags and emojis or some symbols. The tweets were in different languages.
 Analysis by Tags was carried out to find the most used tags. 399 rows were found. The most tweets doesn't have a tag. Some rows have more than one tags. The tags in each row are split and counted separately. There were 532 different tags found.
 Analysis by links was carried out to find the most tweeted links. 1789 rows were found. 1295 tweets did not include any links. There were 1201 hashtags found. The hashtag #WomensMarch was the most used one.
+
 The hashtag #WomensMarch, was widely used across various countries. USA has the most hashtags. California has the most hashtags within USA.
 
 
