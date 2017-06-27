@@ -1,11 +1,8 @@
 # womens-march
-This is a place to join and analyze data related to the Women's Marches. Potentially this can lead to further joining and analysis of data on resistance to Trump and support for rights or issues that Trump opposes, as the Scientists' March on Washington (and possibly others) are discussed about and planned.
+
+This is my volunteer project for Data for Democracy. Data for Democracy is an inclusive community for data scientists and technologists. It is a space for like-minded people to organize, to transform, to collaborate, and to support each other's projects. We help each other track down datasets, refine models, improve visualizations, team up on apps, debug code, promote work, and connect with communities who need our analysis.
 
 **Slack:** [#womens-march](https://datafordemocracy.slack.com/messages/womens-march/)
-
-[**Project Leads:**](https://github.com/Data4Democracy/read-this-first/blob/master/lead-role-description.md) @chris_dick, @nick, @margaret
-
-**Maintainers (people with commit access)**: TBD
 
 **Project Description:** The purpose of this project is to understand geographic, messaging, and sentiment patterns around the Women's March as well as ongoing resistance to Trump as he opposes supporting certain issues.
 
@@ -21,54 +18,22 @@ The Women's March was the largest protest there has been in US History and occur
 
 In conducting this research, we hope to gain new insights and understand the Women's March through data and data visualizations rather than just through news, pictures, stories, and signs.
 
-## Getting started
+# Analysis report
 
-### Things you should know about
-* **"First-timers" are welcome!** Whether you're trying to learn data science, hone your coding skills, or get started collaborating over the web, we're happy to help. *(Sidenote: with respect to Git and GitHub specifically, our [github-playground](https://github.com/Data4Democracy/github-playground) repo and the [#github-help](https://datafordemocracy.slack.com/messages/github-help/) Slack channel are good places to start.)*
-* **We've got (GitHub) Issues.** Ready to dive in and do some good? Check out our issues board. Issues are how we officially keep track of the work we're doing, what we've done, and what we'd like to do next. You can identify different issue types by their tags:
-  * `first-pr`: smaller issues to cut your teeth on as a first-time contributor
-  * `beginner-friendly`: issues suitable for those with less experience or in need of mentorship
-* **We believe good code is reviewed code.** All commits to this repository are approved by project maintainers and/or leads (listed above). The goal here is *not* to criticize or judge your abilities! Rather, sharing insights and achievements this way ensures that we all continue to learn and grow. Code reviews help us continually refine the project's scope and direction, as well as encourage the discussion we need for it to thrive.
-* **This README belongs to everyone.** If we've missed some crucial information or left anything unclear, edit this document and submit a pull request. We welcome the feedback! Up-to-date documentation is critical to what we do, and changes like this are a great way to make your first contribution to the project.
-
-### Currently utilized skills
-Take a look at this list to get an idea of the tools and knowledge we're leveraging. If you're good with any of these, or if you'd like to get better at them, this might be a good project to get involved with!
-* **R** (analysis, R Markdown notebooks, visualization)
-* **Python 3** (scripting, analysis, Jupyter notebooks, visualization)
-* **Data cleaning**
-* **Data analysis**
-* **Data visualization**
+The Women's March tweets data has 3100 entries with 5 columns. There are no missing values in 4 columns whereas the column named "place" has 308 known values(or 2792 missing values).
+All the entries have the same id. Also, the id looks unusual. 51 different sources were used to post the tweets. Most people used "Twitter for iphone" as their source, followed by "Twitter for Android" and "Twitter webclient".
+The tweets were created in different countries having different timezones and in different languages. Surprisingly, all the tweets were created between the time 23:56 and 23:59 on January 21, 2017.
+The Women's March happened in various countries. The tweets include both abbreviated and full name of the US states.
+The column named "place" holds the location from where the tweets are published. It has 308 known values(or 2792 missing values). The analysis was carried out with the known values.It was split into "city" and "State" to facilitate the analysis.
+The dataframe was processed in detail to represent all the US states in an abbreviated form in the column named "State" and USA as their country in the column named "country". The Non-USA locations are unchanged.
+The tweets came from 30 different countries. From the known location tweets, it is found that the major tweets came from USA.
+There were tweets from 41 US states. The state CA(California) has the major tweets, followed by DC(The District of Columbia) and NY(Newyork). There were 3100 tweets in the data. The tweets include hashtags, text messages, links, tags and emojis or some symbols. The tweets were in different languages.
+Analysis by Tags was carried out to find the most used tags. 399 rows were found. The most tweets doesn't have a tag. Some rows have more than one tags. The tags in each row are split and counted separately. There were 532 different tags found.
+Analysis by links was carried out to find the most tweeted links. 1789 rows were found. 1295 tweets did not include any links. There were 1201 hashtags found. The hashtag #WomensMarch was the most used one.
+The hashtag #WomensMarch, was widely used across various countries. USA has the most hashtags. California has the most hashtags within USA.
 
 
-## FAQ and other useful info
-### Downloading this repository
-To download the code and data inside this repository, you'll need [Git](https://git-scm.com/). Once you've got the necessary tools, open a command prompt and run `git clone https://github.com/data4democracy/womens-march.git` to start downloading your own working copy. Once the command finishes, you should see a new `womens-march` directory in the current directory's file listing. That's where you'll find it!
 
-### Project structure (or, "how do I find `thing`?")
-* **Source code and notebooks**: For now, you'll find these in the repository's root directory. This will probably change in the future as we accumulate more files.
-* **Data files**: All data files are located in the `/data` directory. At the moment, there is no further hierarchy beyond this; again, as we accumulate more data, this is likely to change.
 
-### Performing data analysis
-There are many ways to analyze the data in this repository, but "notebook" formats like [Jupyter](http://jupyter.org/install.html) and [R Markdown](http://rmarkdown.rstudio.com/r_notebooks.html) are the most common. The setup process for these tools is in-depth enough to be outside the scope of this README, so please refer to documentation at the aforementioned links if necessary. If something isn't working quite right for you, that's okay! Continue reading to see how you can reach out for assistance.
 
-### Talking to people/asking for help
-If you have questions or you'd like to discuss something on your mind, reach out to us in the [#womens-march](https://datafordemocracy.slack.com/messages/womens-march/) channel on Slack. Project leads and maintainers are available for troubleshooting, brainstorming, mentorship, and just about anything else you might need.
 
-### System requirements (suggested)
-* **Git** (check out the [github-playground](https://github.com/data4democracy/github-playground) repository if you need a good place to get accustomed)
-* **An analytical language of your choice** (Python, R, Julia, etc.)
-* **Python 3** (for Jupyter/`.ipynb` notebook files)
-* **RStudio** (for R Markdown/`.Rmd` notebook files)
-
-## Completed goals
-* **Twitter Data** Pulled streaming Twitter data with hashtags and created S3 output.
-* **Twitter Data from data.world** Downloaded dataset that includes tweets and locations from data.world (https://data.world/wendyhe/tweets-on-womensmarch-and-maga)
-* **Crowd Estimate Data from data.world** Downloaded dataset that includes crowd estimates and latitude longitude for each city from data.world. (https://data.world/carlvlewis/womens-marches-crowd-sizes)
-* **Crowd Estimate Data from data.world** Mapped data
-
-## To be completed
-* **Twitter Data** Clean Twitter data. Analyze and find trends in Twitter data.
-* **Status of Women Data** Clean and prepare data. Analyze and link to crowd estimates or Twitter topics.
-* **Visualize/Analyze** Visualize data spatially or through tools for text data.
-* **More questions/data** Refine questions/ask more questions and find/pull other datasets to broaden the scope.
-* **Storytell** Report on findings and tell a story around the data.
